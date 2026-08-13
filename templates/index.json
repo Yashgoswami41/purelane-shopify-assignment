@@ -329,14 +329,55 @@
         "heading": "Plant-powered cleaning",
         "description": "Simple, thoughtful ingredients designed for effective everyday cleaning."
       }
+    },
+    "purelane_how_it_works_ghqd9Q": {
+      "type": "purelane-how-it-works",
+      "blocks": {
+        "step_BcceKj": {
+          "type": "step",
+          "settings": {
+            "number": "01",
+            "title": "Choose your cleaner",
+            "description": "Pick the product or bundle that fits the job."
+          }
+        },
+        "step_pjRKGT": {
+          "type": "step",
+          "settings": {
+            "number": "02",
+            "title": "Apply & clean",
+            "description": "Use the product as directed on the appropriate surface."
+          }
+        },
+        "step_kPCyf4": {
+          "type": "step",
+          "settings": {
+            "number": "03",
+            "title": "Enjoy a cleaner home",
+            "description": "Simple, effective homecare without unnecessary complexity."
+          }
+        }
+      },
+      "block_order": [
+        "step_BcceKj",
+        "step_pjRKGT",
+        "step_kPCyf4"
+      ],
+      "name": "Purelane How It Works",
+      "settings": {
+        "eyebrow": "Simple by design",
+        "heading": "How it works",
+        "description": "Choose the right product, use it as directed, and get on with your day."
+      }
     }
   },
   "order": [
     "purelane_hero_zRf6pt",
+    "purelane_ingredients_wFwyHH",
+    "purelane_how_it_works_ghqd9Q",
     "purelane_reviews_z8bDe6",
     "purelane_product_grid_Mpjd6X",
     "purelane_combos_CFiC6i",
-    "purelane_bundles_fVyWmQ",
-    "purelane_ingredients_wFwyHH"
+    "purelane_bundles_fVyWmQ"
   ]
 }
