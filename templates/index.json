@@ -27,9 +27,75 @@
         "badge_3": "Zero harsh chemicals",
         "product": "kitchen-cleaner-foaming"
       }
+    },
+    "purelane_reviews_z8bDe6": {
+      "type": "purelane-reviews",
+      "blocks": {
+        "review_dbh4Nk": {
+          "type": "review",
+          "settings": {
+            "title": "Works like a charm",
+            "review": "Finally an eco option that cleans as well as the chemical detergent I used for years, and it smells better.",
+            "customer": "Anita",
+            "product": "Laundry detergent"
+          }
+        },
+        "review_c98fLF": {
+          "type": "review",
+          "settings": {
+            "title": "Best dishwash ever",
+            "review": "Our old dishwash left my help with dry, cracked skin. That stopped completely after we switched.",
+            "customer": "Priya",
+            "product": "Dishwash gel"
+          }
+        },
+        "review_7baJrB": {
+          "type": "review",
+          "settings": {
+            "title": "Great product, great packaging",
+            "review": "Very soft on hands with a lovely fragrance, and it feels good to be using far less plastic.",
+            "customer": "Sunita",
+            "product": "Liquid handwash"
+          }
+        },
+        "review_4bF4Y7": {
+          "type": "review",
+          "settings": {
+            "title": "Dog friendly",
+            "review": "We switched because chemical floor cleaners were setting off my dog's allergies. No reactions since.",
+            "customer": "Rohit S.",
+            "product": "Floor cleaner"
+          }
+        },
+        "review_4fMUgC": {
+          "type": "review",
+          "settings": {
+            "title": "Sparkling taps again",
+            "review": "Hard water had ruined our bathroom fittings. Two sprays and the scale wipes straight off, no scrubbing.",
+            "customer": "Verified buyer",
+            "product": "Tap cleaner"
+          }
+        }
+      },
+      "block_order": [
+        "review_dbh4Nk",
+        "review_c98fLF",
+        "review_7baJrB",
+        "review_4bF4Y7",
+        "review_4fMUgC"
+      ],
+      "name": "Purelane Reviews",
+      "settings": {
+        "eyebrow": "That's what they said",
+        "heading": "Real homes. Real results.",
+        "rating": "4.8",
+        "review_count": "from 8,000+ reviews",
+        "homes": "12 lakh+"
+      }
     }
   },
   "order": [
-    "purelane_hero_zRf6pt"
+    "purelane_hero_zRf6pt",
+    "purelane_reviews_z8bDe6"
   ]
 }
