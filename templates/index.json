@@ -102,11 +102,105 @@
         "collection": "purelane-products",
         "products_to_show": 8
       }
+    },
+    "purelane_combos_CFiC6i": {
+      "type": "purelane-combos",
+      "blocks": {
+        "combo_4FJziA": {
+          "type": "combo",
+          "settings": {
+            "title": "Kitchen essentials",
+            "badge": "Most popular",
+            "saving": "You save ₹398",
+            "count": "3 products",
+            "description": "Includes: Foaming Kitchen Cleaner, Dishwash Gel & Tap Cleaner. Everything for a sparkling kitchen, no need to pick separately.",
+            "price": "₹499",
+            "compare_price": "₹897",
+            "product_1": "",
+            "product_2": "",
+            "product_3": ""
+          }
+        },
+        "combo_rgeiaa": {
+          "type": "combo",
+          "settings": {
+            "title": "Laundry care bundle",
+            "badge": "Most popular",
+            "saving": "You save ₹448",
+            "count": "3 products",
+            "description": "Includes: Laundry Detergent, Fabric Conditioner & Machine Cleaner Powder. Softer, fresher wash, all in one box.",
+            "price": "₹499",
+            "compare_price": "₹947",
+            "product_1": "",
+            "product_2": "",
+            "product_3": ""
+          }
+        },
+        "combo_xkhFhk": {
+          "type": "combo",
+          "settings": {
+            "title": "Complete home bundle",
+            "badge": "Best value",
+            "saving": "Biggest saving",
+            "count": "5 products",
+            "description": "Includes: Kitchen Cleaner, Laundry Detergent, Floor Cleaner, Toilet Cleaner & Handwash. Our biggest saving box.",
+            "price": "₹799",
+            "compare_price": "₹1,495",
+            "product_1": "",
+            "product_2": "",
+            "product_3": ""
+          }
+        },
+        "combo_qfemnA": {
+          "type": "combo",
+          "settings": {
+            "title": "Bathroom deep clean",
+            "badge": "Most popular",
+            "saving": "You save ₹398",
+            "count": "3 products",
+            "description": "Includes: Toilet Cleaner, Tap Cleaner & Magic Eraser. A complete bathroom refresh in one box.",
+            "price": "₹499",
+            "compare_price": "₹897",
+            "product_1": "",
+            "product_2": "",
+            "product_3": ""
+          }
+        },
+        "combo_jQeCGj": {
+          "type": "combo",
+          "settings": {
+            "title": "Hard water solution kit",
+            "badge": "Most popular",
+            "saving": "You save ₹249",
+            "count": "2 products",
+            "description": "Includes: Tap Cleaner & Toilet Cleaner. A quick, focused fix for hard water stains across the home.",
+            "price": "₹349",
+            "compare_price": "₹598",
+            "product_1": "",
+            "product_2": "",
+            "product_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "combo_4FJziA",
+        "combo_rgeiaa",
+        "combo_xkhFhk",
+        "combo_qfemnA",
+        "combo_jQeCGj"
+      ],
+      "name": "Purelane Combos",
+      "settings": {
+        "eyebrow": "Pre-built to save you money",
+        "heading": "Best selling combos",
+        "description": "Swipe through the boxes people order most. Each one is already priced below buying the same products on their own."
+      }
     }
   },
   "order": [
     "purelane_hero_zRf6pt",
     "purelane_reviews_z8bDe6",
-    "purelane_product_grid_Mpjd6X"
+    "purelane_product_grid_Mpjd6X",
+    "purelane_combos_CFiC6i"
   ]
 }
