@@ -92,10 +92,21 @@
         "review_count": "from 8,000+ reviews",
         "homes": "12 lakh+"
       }
+    },
+    "purelane_product_grid_Mpjd6X": {
+      "type": "purelane-product-grid",
+      "name": "Purelane Product Grid",
+      "settings": {
+        "eyebrow": "Bestsellers",
+        "heading": "Loved by 30,000 homes",
+        "collection": "purelane-products",
+        "products_to_show": 8
+      }
     }
   },
   "order": [
     "purelane_hero_zRf6pt",
-    "purelane_reviews_z8bDe6"
+    "purelane_reviews_z8bDe6",
+    "purelane_product_grid_Mpjd6X"
   ]
 }
