@@ -115,9 +115,9 @@
             "description": "Includes: Foaming Kitchen Cleaner, Dishwash Gel & Tap Cleaner. Everything for a sparkling kitchen, no need to pick separately.",
             "price": "₹499",
             "compare_price": "₹897",
-            "product_1": "",
-            "product_2": "",
-            "product_3": ""
+            "product_1": "kitchen-cleaner-foaming",
+            "product_2": "organic-dishwash-gel",
+            "product_3": "tap-cleaner-limescale-remover"
           }
         },
         "combo_rgeiaa": {
@@ -130,8 +130,8 @@
             "description": "Includes: Laundry Detergent, Fabric Conditioner & Machine Cleaner Powder. Softer, fresher wash, all in one box.",
             "price": "₹499",
             "compare_price": "₹947",
-            "product_1": "",
-            "product_2": "",
+            "product_1": "laundry-detergent",
+            "product_2": "washing-machine-cleaner-descaler",
             "product_3": ""
           }
         },
