@@ -117,7 +117,9 @@
             "compare_price": "₹897",
             "product_1": "kitchen-cleaner-foaming",
             "product_2": "organic-dishwash-gel",
-            "product_3": "tap-cleaner-limescale-remover"
+            "product_3": "tap-cleaner-limescale-remover",
+            "product_4": "",
+            "product_5": ""
           }
         },
         "combo_rgeiaa": {
@@ -132,7 +134,9 @@
             "compare_price": "₹947",
             "product_1": "laundry-detergent",
             "product_2": "washing-machine-cleaner-descaler",
-            "product_3": ""
+            "product_3": "natural-herbal-floor-cleaner",
+            "product_4": "",
+            "product_5": ""
           }
         },
         "combo_xkhFhk": {
@@ -145,9 +149,11 @@
             "description": "Includes: Kitchen Cleaner, Laundry Detergent, Floor Cleaner, Toilet Cleaner & Handwash. Our biggest saving box.",
             "price": "₹799",
             "compare_price": "₹1,495",
-            "product_1": "",
-            "product_2": "",
-            "product_3": ""
+            "product_1": "kitchen-cleaner-foaming",
+            "product_2": "laundry-detergent",
+            "product_3": "natural-herbal-floor-cleaner",
+            "product_4": "toilet-cleaner",
+            "product_5": "purelane-plant-based-multi-surface-kitchen-bathroom-laundry-floor-home-cleaning-solution"
           }
         },
         "combo_qfemnA": {
@@ -160,9 +166,11 @@
             "description": "Includes: Toilet Cleaner, Tap Cleaner & Magic Eraser. A complete bathroom refresh in one box.",
             "price": "₹499",
             "compare_price": "₹897",
-            "product_1": "",
-            "product_2": "",
-            "product_3": ""
+            "product_1": "toilet-cleaner",
+            "product_2": "tap-cleaner-limescale-remover",
+            "product_3": "copper-bronze-brass-cleaner",
+            "product_4": "",
+            "product_5": ""
           }
         },
         "combo_jQeCGj": {
@@ -175,9 +183,11 @@
             "description": "Includes: Tap Cleaner & Toilet Cleaner. A quick, focused fix for hard water stains across the home.",
             "price": "₹349",
             "compare_price": "₹598",
-            "product_1": "",
-            "product_2": "",
-            "product_3": ""
+            "product_1": "tap-cleaner-limescale-remover",
+            "product_2": "toilet-cleaner",
+            "product_3": "",
+            "product_4": "",
+            "product_5": ""
           }
         }
       },
@@ -198,33 +208,13 @@
     "purelane_bundles_fVyWmQ": {
       "type": "purelane-bundles",
       "blocks": {
-        "bundle_9VcYeB": {
-          "type": "bundle",
-          "settings": {
-            "tag": "Starter",
-            "highlight": false,
-            "product_1": "",
-            "product_2": "",
-            "product_3": "",
-            "product_4": "",
-            "product_5": "",
-            "quantity": "2",
-            "price": "₹349",
-            "compare_price": "₹598",
-            "per_product": "Flat ₹174 per product",
-            "feature_1": "Pick any two products",
-            "feature_2": "Free shipping across India",
-            "feature_3": "Free shipping across India",
-            "button_text": "Build this box"
-          }
-        },
         "bundle_TXxNJc": {
           "type": "bundle",
           "settings": {
             "tag": "Starter",
             "highlight": false,
-            "product_1": "",
-            "product_2": "",
+            "product_1": "tap-cleaner-limescale-remover",
+            "product_2": "kitchen-cleaner-foaming",
             "product_3": "",
             "product_4": "",
             "product_5": "",
@@ -243,9 +233,9 @@
           "settings": {
             "tag": "Most popular",
             "highlight": true,
-            "product_1": "",
-            "product_2": "",
-            "product_3": "",
+            "product_1": "kitchen-cleaner-foaming",
+            "product_2": "tap-cleaner-limescale-remover",
+            "product_3": "organic-dishwash-gel",
             "product_4": "",
             "product_5": "",
             "quantity": "3",
@@ -263,11 +253,11 @@
           "settings": {
             "tag": "Whole home",
             "highlight": false,
-            "product_1": "",
-            "product_2": "",
-            "product_3": "",
-            "product_4": "",
-            "product_5": "",
+            "product_1": "kitchen-cleaner-foaming",
+            "product_2": "tap-cleaner-limescale-remover",
+            "product_3": "natural-herbal-floor-cleaner",
+            "product_4": "toilet-cleaner",
+            "product_5": "laundry-detergent",
             "quantity": "5",
             "price": "₹799",
             "compare_price": "₹1495",
@@ -280,7 +270,6 @@
         }
       },
       "block_order": [
-        "bundle_9VcYeB",
         "bundle_TXxNJc",
         "bundle_YnDmWB",
         "bundle_YBkGYR"
