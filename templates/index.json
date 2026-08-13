@@ -36,7 +36,7 @@
           "settings": {
             "title": "Works like a charm",
             "review": "Finally an eco option that cleans as well as the chemical detergent I used for years, and it smells better.",
-            "customer": "Anita",
+            "name": "Anita",
             "product": "Laundry detergent"
           }
         },
@@ -45,7 +45,7 @@
           "settings": {
             "title": "Best dishwash ever",
             "review": "Our old dishwash left my help with dry, cracked skin. That stopped completely after we switched.",
-            "customer": "Priya",
+            "name": "Anita",
             "product": "Dishwash gel"
           }
         },
@@ -54,7 +54,7 @@
           "settings": {
             "title": "Great product, great packaging",
             "review": "Very soft on hands with a lovely fragrance, and it feels good to be using far less plastic.",
-            "customer": "Sunita",
+            "name": "Anita",
             "product": "Liquid handwash"
           }
         },
@@ -63,7 +63,7 @@
           "settings": {
             "title": "Dog friendly",
             "review": "We switched because chemical floor cleaners were setting off my dog's allergies. No reactions since.",
-            "customer": "Rohit S.",
+            "name": "Anita",
             "product": "Floor cleaner"
           }
         },
@@ -72,7 +72,7 @@
           "settings": {
             "title": "Sparkling taps again",
             "review": "Hard water had ruined our bathroom fittings. Two sprays and the scale wipes straight off, no scrubbing.",
-            "customer": "Verified buyer",
+            "name": "Anita",
             "product": "Tap cleaner"
           }
         }
@@ -87,7 +87,6 @@
       "name": "Purelane Reviews",
       "settings": {
         "eyebrow": "That's what they said",
-        "heading": "Real homes. Real results.",
         "rating": "4.8",
         "review_count": "from 8,000+ reviews",
         "homes": "12 lakh+"
@@ -199,6 +198,26 @@
     "purelane_bundles_fVyWmQ": {
       "type": "purelane-bundles",
       "blocks": {
+        "bundle_9VcYeB": {
+          "type": "bundle",
+          "settings": {
+            "tag": "Starter",
+            "highlight": false,
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": "",
+            "quantity": "2",
+            "price": "₹349",
+            "compare_price": "₹598",
+            "per_product": "Flat ₹174 per product",
+            "feature_1": "Pick any two products",
+            "feature_2": "Free shipping across India",
+            "feature_3": "Free shipping across India",
+            "button_text": "Build this box"
+          }
+        },
         "bundle_TXxNJc": {
           "type": "bundle",
           "settings": {
@@ -261,6 +280,7 @@
         }
       },
       "block_order": [
+        "bundle_9VcYeB",
         "bundle_TXxNJc",
         "bundle_YnDmWB",
         "bundle_YBkGYR"
