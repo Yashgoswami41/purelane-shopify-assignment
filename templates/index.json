@@ -195,12 +195,89 @@
         "heading": "Best selling combos",
         "description": "Swipe through the boxes people order most. Each one is already priced below buying the same products on their own."
       }
+    },
+    "purelane_bundles_fVyWmQ": {
+      "type": "purelane-bundles",
+      "blocks": {
+        "bundle_TXxNJc": {
+          "type": "bundle",
+          "settings": {
+            "tag": "Starter",
+            "highlight": false,
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": "",
+            "quantity": "2",
+            "price": "₹349",
+            "compare_price": "₹598",
+            "per_product": "Flat ₹174 per product",
+            "feature_1": "Pick any two products",
+            "feature_2": "Free shipping across India",
+            "feature_3": "Free shipping across India",
+            "button_text": "Build this box"
+          }
+        },
+        "bundle_YnDmWB": {
+          "type": "bundle",
+          "settings": {
+            "tag": "Most popular",
+            "highlight": true,
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": "",
+            "quantity": "3",
+            "price": "₹499",
+            "compare_price": "₹897",
+            "per_product": "Flat ₹166 per product",
+            "feature_1": "Pick any three products",
+            "feature_2": "Covers kitchen and laundry",
+            "feature_3": "Free shipping across India",
+            "button_text": "Build this box"
+          }
+        },
+        "bundle_YBkGYR": {
+          "type": "bundle",
+          "settings": {
+            "tag": "Whole home",
+            "highlight": false,
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": "",
+            "quantity": "5",
+            "price": "₹799",
+            "compare_price": "₹1495",
+            "per_product": "Flat ₹160 per product",
+            "feature_1": "Pick any five products",
+            "feature_2": "Every room in one order",
+            "feature_3": "Free shipping across India",
+            "button_text": "Build this box"
+          }
+        }
+      },
+      "block_order": [
+        "bundle_TXxNJc",
+        "bundle_YnDmWB",
+        "bundle_YBkGYR"
+      ],
+      "name": "Purelane Bundles",
+      "settings": {
+        "eyebrow": "Build your bundle",
+        "heading": "One box. Every room.",
+        "description": "Mix and match across kitchen, laundry, home and skin. One flat price, no code needed, free shipping either way."
+      }
     }
   },
   "order": [
     "purelane_hero_zRf6pt",
     "purelane_reviews_z8bDe6",
     "purelane_product_grid_Mpjd6X",
-    "purelane_combos_CFiC6i"
+    "purelane_combos_CFiC6i",
+    "purelane_bundles_fVyWmQ"
   ]
 }
