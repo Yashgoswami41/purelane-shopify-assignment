@@ -1,0 +1,759 @@
+<section id="bundles" class="purelane-bundles">
+
+  <div class="purelane-bundles__intro">
+
+    <p class="purelane-bundles__eyebrow">
+      {{ section.settings.eyebrow }}
+    </p>
+
+    <h2>
+      {{ section.settings.heading }}
+    </h2>
+
+    <p>
+      {{ section.settings.description }}
+    </p>
+
+  </div>
+
+
+  <div class="purelane-bundles__tiers">
+
+    {% for block in section.blocks %}
+
+      <article
+        class="purelane-bundle {% if block.settings.highlight %}purelane-bundle--featured{% endif %}"
+        {{ block.shopify_attributes }}
+      >
+
+        {% if block.settings.tag != blank %}
+          <span class="purelane-bundle__tag">
+            {{ block.settings.tag }}
+          </span>
+        {% endif %}
+
+
+        <div class="purelane-bundle__products">
+
+          {% if block.settings.product_1 != blank %}
+
+            <div class="purelane-bundle__product">
+
+              {% if block.settings.product_1.featured_image %}
+
+                {{
+                  block.settings.product_1.featured_image
+                  | image_url: width: 180
+                  | image_tag:
+                    loading: 'lazy',
+                    alt: block.settings.product_1.title
+                }}
+
+              {% endif %}
+
+            </div>
+
+          {% endif %}
+
+
+          {% if block.settings.product_2 != blank %}
+
+            <div class="purelane-bundle__product">
+
+              {% if block.settings.product_2.featured_image %}
+
+                {{
+                  block.settings.product_2.featured_image
+                  | image_url: width: 180
+                  | image_tag:
+                    loading: 'lazy',
+                    alt: block.settings.product_2.title
+                }}
+
+              {% endif %}
+
+            </div>
+
+          {% endif %}
+
+
+          {% if block.settings.product_3 != blank %}
+
+            <div class="purelane-bundle__product">
+
+              {% if block.settings.product_3.featured_image %}
+
+                {{
+                  block.settings.product_3.featured_image
+                  | image_url: width: 180
+                  | image_tag:
+                    loading: 'lazy',
+                    alt: block.settings.product_3.title
+                }}
+
+              {% endif %}
+
+            </div>
+
+          {% endif %}
+
+
+          {% if block.settings.product_4 != blank %}
+
+            <div class="purelane-bundle__product">
+
+              {% if block.settings.product_4.featured_image %}
+
+                {{
+                  block.settings.product_4.featured_image
+                  | image_url: width: 180
+                  | image_tag:
+                    loading: 'lazy',
+                    alt: block.settings.product_4.title
+                }}
+
+              {% endif %}
+
+            </div>
+
+          {% endif %}
+
+
+          {% if block.settings.product_5 != blank %}
+
+            <div class="purelane-bundle__product">
+
+              {% if block.settings.product_5.featured_image %}
+
+                {{
+                  block.settings.product_5.featured_image
+                  | image_url: width: 180
+                  | image_tag:
+                    loading: 'lazy',
+                    alt: block.settings.product_5.title
+                }}
+
+              {% endif %}
+
+            </div>
+
+          {% endif %}
+
+        </div>
+
+
+        <div class="purelane-bundle__quantity">
+
+          <strong>
+            {{ block.settings.quantity }}
+          </strong>
+
+          <span>
+            Products
+          </span>
+
+        </div>
+
+
+        <div class="purelane-bundle__price">
+
+          <strong>
+            {{ block.settings.price }}
+          </strong>
+
+          {% if block.settings.compare_price != blank %}
+            <s>
+              {{ block.settings.compare_price }}
+            </s>
+          {% endif %}
+
+        </div>
+
+
+        <p class="purelane-bundle__per-product">
+          {{ block.settings.per_product }}
+        </p>
+
+
+        <ul>
+
+          <li>
+            ✓ {{ block.settings.feature_1 }}
+          </li>
+
+          {% if block.settings.feature_2 != blank %}
+            <li>
+              ✓ {{ block.settings.feature_2 }}
+            </li>
+          {% endif %}
+
+          {% if block.settings.feature_3 != blank %}
+            <li>
+              ✓ {{ block.settings.feature_3 }}
+            </li>
+          {% endif %}
+
+        </ul>
+
+
+        <a
+          href="#shop"
+          class="purelane-bundle__button {% if block.settings.highlight %}purelane-bundle__button--primary{% endif %}"
+        >
+          {{ block.settings.button_text }}
+          →
+        </a>
+
+      </article>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+<style>
+
+  .purelane-bundles {
+    padding: 85px 5%;
+    background: #f4f0e8;
+  }
+
+
+  .purelane-bundles__intro {
+    max-width: 850px;
+    margin: 0 auto 45px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,.65);
+
+    border: 1px solid rgba(38,56,47,.12);
+
+    border-radius: 22px;
+  }
+
+
+  .purelane-bundles__eyebrow {
+    margin: 0 0 10px;
+
+    font-size: 13px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    opacity: .6;
+  }
+
+
+  .purelane-bundles__intro h2 {
+    margin: 0;
+
+    font-size: clamp(40px,5vw,64px);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: -.045em;
+  }
+
+
+  .purelane-bundles__intro > p:last-child {
+    max-width: 650px;
+
+    margin: 18px auto 0;
+
+    line-height: 1.6;
+
+    opacity: .7;
+  }
+
+
+  .purelane-bundles__tiers {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 18px;
+  }
+
+
+  .purelane-bundle {
+
+    position: relative;
+
+    padding: 30px;
+
+    background: rgba(255,255,255,.72);
+
+    border: 1px solid rgba(38,56,47,.12);
+
+    border-radius: 20px;
+
+    text-align: center;
+  }
+
+
+  .purelane-bundle--featured {
+
+    border: 2px solid #26382f;
+
+    transform: translateY(-8px);
+  }
+
+
+  .purelane-bundle__tag {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: #26382f;
+
+    color: white;
+
+    font-size: 11px;
+  }
+
+
+  .purelane-bundle__products {
+
+    min-height: 145px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .purelane-bundle__product {
+
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+
+  .purelane-bundle__product img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+
+
+  .purelane-bundle__quantity {
+
+    margin-top: 5px;
+  }
+
+
+  .purelane-bundle__quantity strong {
+
+    display: block;
+
+    font-size: 32px;
+
+    line-height: 1;
+  }
+
+
+  .purelane-bundle__quantity span {
+
+    font-size: 12px;
+
+    opacity: .6;
+  }
+
+
+  .purelane-bundle__price {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 12px;
+  }
+
+
+  .purelane-bundle__price strong {
+
+    font-size: 27px;
+  }
+
+
+  .purelane-bundle__price s {
+
+    font-size: 14px;
+
+    opacity: .5;
+  }
+
+
+  .purelane-bundle__per-product {
+
+    margin: 7px 0 20px;
+
+    font-size: 12px;
+
+    opacity: .65;
+  }
+
+
+  .purelane-bundle ul {
+
+    margin: 0 0 25px;
+
+    padding: 0;
+
+    list-style: none;
+
+    text-align: left;
+  }
+
+
+  .purelane-bundle li {
+
+    padding: 8px 0;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    border-bottom: 1px solid rgba(38,56,47,.08);
+  }
+
+
+  .purelane-bundle__button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 13px 18px;
+
+    border: 1px solid #26382f;
+
+    border-radius: 999px;
+
+    color: #26382f;
+
+    text-decoration: none;
+
+    transition:
+      background .2s ease,
+      color .2s ease;
+  }
+
+
+  .purelane-bundle__button:hover {
+
+    background: #26382f;
+
+    color: white;
+  }
+
+
+  .purelane-bundle__button--primary {
+
+    background: #26382f;
+
+    color: white;
+  }
+
+
+  .purelane-bundle__button--primary:hover {
+
+    background: transparent;
+
+    color: #26382f;
+  }
+
+
+  .purelane-bundle__button:focus-visible {
+
+    outline: 3px solid #587c67;
+
+    outline-offset: 3px;
+  }
+
+
+  @media screen and (max-width: 900px) {
+
+    .purelane-bundles__tiers {
+
+      grid-template-columns: 1fr;
+      max-width: 550px;
+    }
+
+    .purelane-bundle--featured {
+
+      transform: none;
+    }
+
+  }
+
+
+  @media screen and (max-width: 749px) {
+
+    .purelane-bundles {
+
+      padding: 60px 20px;
+    }
+
+    .purelane-bundles__intro {
+
+      padding: 30px 20px;
+    }
+
+    .purelane-bundle {
+
+      padding: 25px 20px;
+    }
+
+  }
+
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .purelane-bundle__button {
+
+      transition: none;
+    }
+
+  }
+
+</style>
+
+
+{% schema %}
+
+{
+  "name": "Purelane Bundles",
+
+  "settings": [
+
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Build your bundle"
+    },
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "One box. Every room."
+    },
+
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Mix and match across kitchen, laundry, home and skin. One flat price, no code needed, free shipping either way."
+    }
+
+  ],
+
+  "blocks": [
+
+    {
+      "type": "bundle",
+      "name": "Bundle tier",
+
+      "settings": [
+
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag",
+          "default": "Starter"
+        },
+
+        {
+          "type": "checkbox",
+          "id": "highlight",
+          "label": "Highlight this bundle",
+          "default": false
+        },
+
+        {
+          "type": "product",
+          "id": "product_1",
+          "label": "Product 1"
+        },
+
+        {
+          "type": "product",
+          "id": "product_2",
+          "label": "Product 2"
+        },
+
+        {
+          "type": "product",
+          "id": "product_3",
+          "label": "Product 3"
+        },
+
+        {
+          "type": "product",
+          "id": "product_4",
+          "label": "Product 4"
+        },
+
+        {
+          "type": "product",
+          "id": "product_5",
+          "label": "Product 5"
+        },
+
+        {
+          "type": "text",
+          "id": "quantity",
+          "label": "Quantity",
+          "default": "2"
+        },
+
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Bundle price",
+          "default": "₹349"
+        },
+
+        {
+          "type": "text",
+          "id": "compare_price",
+          "label": "Compare price",
+          "default": "₹598"
+        },
+
+        {
+          "type": "text",
+          "id": "per_product",
+          "label": "Price per product",
+          "default": "Flat ₹174 per product"
+        },
+
+        {
+          "type": "text",
+          "id": "feature_1",
+          "label": "Feature 1",
+          "default": "Pick any two products"
+        },
+
+        {
+          "type": "text",
+          "id": "feature_2",
+          "label": "Feature 2",
+          "default": "Free shipping across India"
+        },
+
+        {
+          "type": "text",
+          "id": "feature_3",
+          "label": "Feature 3",
+          "default": "Free shipping across India"
+        },
+
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Build this box"
+        }
+
+      ]
+    }
+
+  ],
+
+  "presets": [
+
+    {
+      "name": "Purelane Bundles",
+
+      "blocks": [
+
+        {
+          "type": "bundle",
+          "settings": {
+            "tag": "Starter",
+            "quantity": "2",
+            "price": "₹349",
+            "compare_price": "₹598",
+            "per_product": "Flat ₹174 per product",
+            "feature_1": "Pick any two products",
+            "feature_2": "Free shipping across India",
+            "button_text": "Build this box"
+          }
+        },
+
+        {
+          "type": "bundle",
+          "settings": {
+            "tag": "Most popular",
+            "highlight": true,
+            "quantity": "3",
+            "price": "₹499",
+            "compare_price": "₹897",
+            "per_product": "Flat ₹166 per product",
+            "feature_1": "Pick any three products",
+            "feature_2": "Covers kitchen and laundry",
+            "feature_3": "Free shipping across India",
+            "button_text": "Build this box"
+          }
+        },
+
+        {
+          "type": "bundle",
+          "settings": {
+            "tag": "Whole home",
+            "quantity": "5",
+            "price": "₹799",
+            "compare_price": "₹1495",
+            "per_product": "Flat ₹160 per product",
+            "feature_1": "Pick any five products",
+            "feature_2": "Every room in one order",
+            "feature_3": "Free shipping across India",
+            "button_text": "Build this box"
+          }
+        }
+
+      ]
+    }
+
+  ]
+
+}
+
+{% endschema %}
