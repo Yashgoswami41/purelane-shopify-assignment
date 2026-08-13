@@ -87,27 +87,77 @@
 
             {% if block.settings.product_3 != blank %}
 
-              <span class="purelane-combo__plus">+</span>
+  <span class="purelane-combo__plus">+</span>
 
-              <div class="purelane-combo__product">
+  <div class="purelane-combo__product">
 
-                {% if block.settings.product_3.featured_image %}
-                  {{
-                    block.settings.product_3.featured_image
-                    | image_url: width: 180
-                    | image_tag:
-                      loading: 'lazy',
-                      alt: block.settings.product_3.title
-                  }}
-                {% endif %}
+    {% if block.settings.product_3.featured_image %}
+      {{
+        block.settings.product_3.featured_image
+        | image_url: width: 180
+        | image_tag:
+          loading: 'lazy',
+          alt: block.settings.product_3.title
+      }}
+    {% endif %}
 
-                <span>
-                  {{ block.settings.product_3.title }}
-                </span>
+    <span>
+      {{ block.settings.product_3.title }}
+    </span>
 
-              </div>
+  </div>
 
-            {% endif %}
+{% endif %}
+
+
+{% if block.settings.product_4 != blank %}
+
+  <span class="purelane-combo__plus">+</span>
+
+  <div class="purelane-combo__product">
+
+    {% if block.settings.product_4.featured_image %}
+      {{
+        block.settings.product_4.featured_image
+        | image_url: width: 180
+        | image_tag:
+          loading: 'lazy',
+          alt: block.settings.product_4.title
+      }}
+    {% endif %}
+
+    <span>
+      {{ block.settings.product_4.title }}
+    </span>
+
+  </div>
+
+{% endif %}
+
+
+{% if block.settings.product_5 != blank %}
+
+  <span class="purelane-combo__plus">+</span>
+
+  <div class="purelane-combo__product">
+
+    {% if block.settings.product_5.featured_image %}
+      {{
+        block.settings.product_5.featured_image
+        | image_url: width: 180
+        | image_tag:
+          loading: 'lazy',
+          alt: block.settings.product_5.title
+      }}
+    {% endif %}
+
+    <span>
+      {{ block.settings.product_5.title }}
+    </span>
+
+  </div>
+
+{% endif %}
 
           </div>
 
