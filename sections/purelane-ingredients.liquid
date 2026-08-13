@@ -1,0 +1,289 @@
+<section id="ingredients" class="purelane-ingredients">
+
+  <div class="purelane-ingredients__header">
+
+    {% if section.settings.eyebrow != blank %}
+      <p class="purelane-ingredients__eyebrow">
+        {{ section.settings.eyebrow }}
+      </p>
+    {% endif %}
+
+    <h2>{{ section.settings.heading }}</h2>
+
+    <div class="purelane-ingredients__rule">
+      <span></span>
+      <span>✦</span>
+      <span></span>
+    </div>
+
+    {% if section.settings.description != blank %}
+      <p class="purelane-ingredients__intro">
+        {{ section.settings.description }}
+      </p>
+    {% endif %}
+
+  </div>
+
+
+  <div class="purelane-ingredients__grid">
+
+    {% for block in section.blocks %}
+
+      <article
+        class="purelane-ingredient"
+        {{ block.shopify_attributes }}
+      >
+
+        <div class="purelane-ingredient__number">
+          {{ block.settings.number }}
+        </div>
+
+        <div class="purelane-ingredient__content">
+
+          <h3>
+            {{ block.settings.title }}
+          </h3>
+
+          <p>
+            {{ block.settings.description }}
+          </p>
+
+        </div>
+
+      </article>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+<style>
+
+  .purelane-ingredients {
+    padding: 85px 5%;
+    background: #f8f5ee;
+  }
+
+  .purelane-ingredients__header {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  .purelane-ingredients__eyebrow {
+    margin: 0 0 10px;
+    font-size: 13px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    opacity: .6;
+  }
+
+  .purelane-ingredients h2 {
+    margin: 0;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -.04em;
+  }
+
+  .purelane-ingredients__rule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  .purelane-ingredients__rule span:first-child,
+  .purelane-ingredients__rule span:last-child {
+    width: 70px;
+    height: 1px;
+    background: rgba(38, 56, 47, .25);
+  }
+
+  .purelane-ingredients__intro {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+    opacity: .7;
+  }
+
+  .purelane-ingredients__grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .purelane-ingredient {
+    padding: 28px;
+    background: rgba(255, 255, 255, .65);
+    border: 1px solid rgba(38, 56, 47, .12);
+    border-radius: 18px;
+  }
+
+  .purelane-ingredient__number {
+    margin-bottom: 35px;
+    font-size: 13px;
+    opacity: .5;
+  }
+
+  .purelane-ingredient h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .purelane-ingredient p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: .7;
+  }
+
+
+  @media screen and (max-width: 900px) {
+
+    .purelane-ingredients__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+
+  @media screen and (max-width: 749px) {
+
+    .purelane-ingredients {
+      padding: 60px 20px;
+    }
+
+    .purelane-ingredients__grid {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+</style>
+
+
+{% schema %}
+
+{
+  "name": "Purelane Ingredients",
+
+  "settings": [
+
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "What's inside"
+    },
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Plant-powered cleaning"
+    },
+
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Simple, thoughtful ingredients designed for effective everyday cleaning."
+    }
+
+  ],
+
+  "blocks": [
+
+    {
+      "type": "ingredient",
+      "name": "Ingredient",
+
+      "settings": [
+
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "01"
+        },
+
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Plant-based cleaning"
+        },
+
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Effective everyday cleaning with a plant-forward approach."
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "presets": [
+
+    {
+      "name": "Purelane Ingredients",
+
+      "blocks": [
+
+        {
+          "type": "ingredient",
+          "settings": {
+            "number": "01",
+            "title": "Plant-based cleaning",
+            "description": "Effective everyday cleaning with a plant-forward approach."
+          }
+        },
+
+        {
+          "type": "ingredient",
+          "settings": {
+            "number": "02",
+            "title": "Citrus freshness",
+            "description": "A fresh, clean feel designed for everyday homecare."
+          }
+        },
+
+        {
+          "type": "ingredient",
+          "settings": {
+            "number": "03",
+            "title": "Mineral-powered",
+            "description": "Designed to help tackle everyday buildup and stubborn residue."
+          }
+        },
+
+        {
+          "type": "ingredient",
+          "settings": {
+            "number": "04",
+            "title": "Thoughtful formulas",
+            "description": "Simple homecare products without unnecessary complexity."
+          }
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+
+{% endschema %}
