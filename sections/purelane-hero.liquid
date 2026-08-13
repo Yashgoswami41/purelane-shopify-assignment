@@ -1,0 +1,412 @@
+<section class="purelane-hero">
+  <div class="purelane-hero__inner">
+
+    <div class="purelane-hero__content">
+
+      <p class="purelane-hero__eyebrow">
+        {{ section.settings.eyebrow }}
+      </p>
+
+      <h1 class="purelane-hero__title">
+        {{ section.settings.heading_1 }}<br>
+        {{ section.settings.heading_2 }}<br>
+        <span>{{ section.settings.heading_3 }}</span>
+      </h1>
+
+      <p class="purelane-hero__description">
+        {{ section.settings.description }}
+      </p>
+
+      <div class="purelane-hero__buttons">
+        <a
+          href="{{ section.settings.primary_link }}"
+          class="purelane-hero__button purelane-hero__button--primary"
+        >
+          {{ section.settings.primary_text }}
+          <span>→</span>
+        </a>
+
+        <a
+          href="{{ section.settings.secondary_link }}"
+          class="purelane-hero__button purelane-hero__button--secondary"
+        >
+          {{ section.settings.secondary_text }}
+        </a>
+      </div>
+
+      <div class="purelane-hero__badges">
+
+        <div class="purelane-hero__badge">
+          <span>♧</span>
+          {{ section.settings.badge_1 }}
+        </div>
+
+        <div class="purelane-hero__badge">
+          <span>✓</span>
+          {{ section.settings.badge_2 }}
+        </div>
+
+        <div class="purelane-hero__badge">
+          <span>◯</span>
+          {{ section.settings.badge_3 }}
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="purelane-hero__product">
+
+      {% if section.settings.product != blank %}
+        {% assign hero_product = section.settings.product %}
+
+        {% if hero_product.featured_image %}
+          <div class="purelane-hero__image">
+            {{
+              hero_product.featured_image
+              | image_url: width: 700
+              | image_tag:
+                loading: 'eager',
+                widths: '350,500,700',
+                alt: hero_product.title
+            }}
+          </div>
+        {% else %}
+          <div class="purelane-hero__no-image">
+            No product image
+          </div>
+        {% endif %}
+
+        <div class="purelane-hero__price">
+
+          <div class="purelane-hero__product-name">
+            {{ hero_product.title }}
+          </div>
+
+          <div>
+            <strong>
+              {{ hero_product.price | money }}
+            </strong>
+
+            {% if hero_product.compare_at_price > hero_product.price %}
+              <s>
+                {{ hero_product.compare_at_price | money }}
+              </s>
+            {% endif %}
+          </div>
+
+          {% if hero_product.compare_at_price > hero_product.price %}
+            <small>
+              Sale
+            </small>
+          {% endif %}
+
+        </div>
+
+      {% else %}
+
+        <div class="purelane-hero__placeholder">
+          Select a product
+        </div>
+
+      {% endif %}
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+  .purelane-hero {
+    background:
+      radial-gradient(circle at 75% 35%, rgba(210, 224, 190, 0.55), transparent 32%),
+      linear-gradient(135deg, #f3eee5 0%, #e5eadb 52%, #d7e2d0 100%);
+    padding: 80px 5%;
+    overflow: hidden;
+  }
+
+  .purelane-hero__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .purelane-hero__content {
+    max-width: 620px;
+  }
+
+  .purelane-hero__eyebrow {
+    margin: 0 0 18px;
+    font-size: 14px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.65;
+  }
+
+  .purelane-hero__title {
+    margin: 0;
+    font-size: clamp(58px, 7vw, 105px);
+    line-height: 0.88;
+    letter-spacing: -0.055em;
+    font-weight: 500;
+  }
+
+  .purelane-hero__title span {
+    font-style: italic;
+  }
+
+  .purelane-hero__description {
+    max-width: 520px;
+    margin: 32px 0 26px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .purelane-hero__buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .purelane-hero__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .purelane-hero__button:hover {
+    transform: translateY(-2px);
+  }
+
+  .purelane-hero__button--primary {
+    background: #26382f;
+    color: #fff;
+  }
+
+  .purelane-hero__button--secondary {
+    border: 1px solid rgba(38, 56, 47, 0.35);
+    color: #26382f;
+  }
+
+  .purelane-hero__badges {
+    display: flex;
+    gap: 10px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+  }
+
+  .purelane-hero__badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 13px;
+    border: 1px solid rgba(38, 56, 47, 0.15);
+    background: rgba(255,255,255,0.42);
+    border-radius: 12px;
+    font-size: 13px;
+  }
+
+  .purelane-hero__badge span {
+    font-size: 17px;
+  }
+
+  .purelane-hero__product {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .purelane-hero__image {
+    width: min(75%, 420px);
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .purelane-hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .purelane-hero__price {
+    min-width: 230px;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.72);
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 14px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  .purelane-hero__product-name {
+    margin-bottom: 7px;
+    font-size: 14px;
+  }
+
+  .purelane-hero__price strong {
+    font-size: 22px;
+  }
+
+  .purelane-hero__price s {
+    margin-left: 7px;
+    opacity: 0.55;
+  }
+
+  .purelane-hero__price small {
+    display: block;
+    margin-top: 4px;
+  }
+
+  .purelane-hero__placeholder,
+  .purelane-hero__no-image {
+    padding: 50px;
+    border: 1px dashed #999;
+    border-radius: 15px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .purelane-hero {
+      padding: 55px 20px;
+    }
+
+    .purelane-hero__inner {
+      min-height: auto;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .purelane-hero__title {
+      font-size: clamp(55px, 17vw, 78px);
+    }
+
+    .purelane-hero__description {
+      font-size: 16px;
+    }
+
+    .purelane-hero__product {
+      min-height: 360px;
+    }
+
+    .purelane-hero__image {
+      width: 75%;
+      height: 320px;
+    }
+
+    .purelane-hero__badges {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .purelane-hero__badge {
+      justify-content: center;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .purelane-hero__button {
+      transition: none;
+    }
+  }
+</style>
+
+
+{% schema %}
+{
+  "name": "Purelane Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Plant-powered homecare"
+    },
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Heading line 1",
+      "default": "Clean"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Heading line 2",
+      "default": "That"
+    },
+    {
+      "type": "text",
+      "id": "heading_3",
+      "label": "Heading line 3",
+      "default": "Lasts"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Homecare that works on the toughest grime, made from plants. Kind to your home, your family and the world outside it."
+    },
+    {
+      "type": "text",
+      "id": "primary_text",
+      "label": "Primary button",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_text",
+      "label": "Secondary button",
+      "default": "How it works"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "text",
+      "id": "badge_1",
+      "label": "Badge 1",
+      "default": "Plant powered"
+    },
+    {
+      "type": "text",
+      "id": "badge_2",
+      "label": "Badge 2",
+      "default": "Kids & pet safe"
+    },
+    {
+      "type": "text",
+      "id": "badge_3",
+      "label": "Badge 3",
+      "default": "Zero harsh chemicals"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Hero product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Purelane Hero"
+    }
+  ]
+}
+{% endschema %}
