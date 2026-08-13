@@ -280,6 +280,55 @@
         "heading": "One box. Every room.",
         "description": "Mix and match across kitchen, laundry, home and skin. One flat price, no code needed, free shipping either way."
       }
+    },
+    "purelane_ingredients_wFwyHH": {
+      "type": "purelane-ingredients",
+      "blocks": {
+        "ingredient_XLdHmQ": {
+          "type": "ingredient",
+          "settings": {
+            "number": "01",
+            "title": "Plant-based cleaning",
+            "description": "Effective everyday cleaning with a plant-forward approach."
+          }
+        },
+        "ingredient_TCtGXF": {
+          "type": "ingredient",
+          "settings": {
+            "number": "02",
+            "title": "Citrus freshness",
+            "description": "A fresh, clean feel designed for everyday homecare."
+          }
+        },
+        "ingredient_q3tRik": {
+          "type": "ingredient",
+          "settings": {
+            "number": "03",
+            "title": "Mineral-powered",
+            "description": "Designed to help tackle everyday buildup and stubborn residue."
+          }
+        },
+        "ingredient_nNWMWf": {
+          "type": "ingredient",
+          "settings": {
+            "number": "04",
+            "title": "Thoughtful formulas",
+            "description": "Simple homecare products without unnecessary complexity."
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_XLdHmQ",
+        "ingredient_TCtGXF",
+        "ingredient_q3tRik",
+        "ingredient_nNWMWf"
+      ],
+      "name": "Purelane Ingredients",
+      "settings": {
+        "eyebrow": "What's inside",
+        "heading": "Plant-powered cleaning",
+        "description": "Simple, thoughtful ingredients designed for effective everyday cleaning."
+      }
     }
   },
   "order": [
@@ -287,6 +336,7 @@
     "purelane_reviews_z8bDe6",
     "purelane_product_grid_Mpjd6X",
     "purelane_combos_CFiC6i",
-    "purelane_bundles_fVyWmQ"
+    "purelane_bundles_fVyWmQ",
+    "purelane_ingredients_wFwyHH"
   ]
 }
