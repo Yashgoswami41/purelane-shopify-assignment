@@ -1,0 +1,262 @@
+<section id="how-it-works" class="purelane-how">
+
+  <div class="purelane-how__header">
+
+    <p>{{ section.settings.eyebrow }}</p>
+
+    <h2>{{ section.settings.heading }}</h2>
+
+    <div class="purelane-how__rule">
+      <span></span>
+      <span>✦</span>
+      <span></span>
+    </div>
+
+    <p class="purelane-how__intro">
+      {{ section.settings.description }}
+    </p>
+
+  </div>
+
+
+  <div class="purelane-how__steps">
+
+    {% for block in section.blocks %}
+
+      <article
+        class="purelane-how__step"
+        {{ block.shopify_attributes }}
+      >
+
+        <span class="purelane-how__number">
+          {{ block.settings.number }}
+        </span>
+
+        <h3>
+          {{ block.settings.title }}
+        </h3>
+
+        <p>
+          {{ block.settings.description }}
+        </p>
+
+      </article>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+<style>
+
+  .purelane-how {
+    padding: 85px 5%;
+    background: #e8eee4;
+  }
+
+  .purelane-how__header {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  .purelane-how__header > p:first-child {
+    margin: 0 0 10px;
+    font-size: 13px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    opacity: .6;
+  }
+
+  .purelane-how h2 {
+    margin: 0;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -.04em;
+  }
+
+  .purelane-how__rule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  .purelane-how__rule span:first-child,
+  .purelane-how__rule span:last-child {
+    width: 70px;
+    height: 1px;
+    background: rgba(38, 56, 47, .25);
+  }
+
+  .purelane-how__intro {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+    opacity: .7;
+  }
+
+  .purelane-how__steps {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .purelane-how__step {
+    padding: 35px;
+    background: rgba(255, 255, 255, .6);
+    border: 1px solid rgba(38, 56, 47, .12);
+    border-radius: 18px;
+  }
+
+  .purelane-how__number {
+    display: block;
+    margin-bottom: 45px;
+    font-size: 13px;
+    opacity: .5;
+  }
+
+  .purelane-how__step h3 {
+    margin: 0 0 12px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .purelane-how__step p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: .7;
+  }
+
+
+  @media screen and (max-width: 749px) {
+
+    .purelane-how {
+      padding: 60px 20px;
+    }
+
+    .purelane-how__steps {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+</style>
+
+
+{% schema %}
+
+{
+  "name": "Purelane How It Works",
+
+  "settings": [
+
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Simple by design"
+    },
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "How it works"
+    },
+
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Choose the right product, use it as directed, and get on with your day."
+    }
+
+  ],
+
+  "blocks": [
+
+    {
+      "type": "step",
+      "name": "Step",
+
+      "settings": [
+
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "01"
+        },
+
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Choose your cleaner"
+        },
+
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Pick the product or bundle that fits the job."
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "presets": [
+
+    {
+      "name": "Purelane How It Works",
+
+      "blocks": [
+
+        {
+          "type": "step",
+          "settings": {
+            "number": "01",
+            "title": "Choose your cleaner",
+            "description": "Pick the product or bundle that fits the job."
+          }
+        },
+
+        {
+          "type": "step",
+          "settings": {
+            "number": "02",
+            "title": "Apply & clean",
+            "description": "Use the product as directed on the appropriate surface."
+          }
+        },
+
+        {
+          "type": "step",
+          "settings": {
+            "number": "03",
+            "title": "Enjoy a cleaner home",
+            "description": "Simple, effective homecare without unnecessary complexity."
+          }
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+
+{% endschema %}
